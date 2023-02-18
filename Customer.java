@@ -8,8 +8,27 @@ public abstract class Customer {
     public Customer(char tt)
     {
         ticketType = tt;
-        ticketCounter++;
-        ticketNumber = ticketCounter;
+        if(tt == 'A')
+        {
+            AticketCounter++;
+            ticketNumber = AticketCounter;
+        }
+        if(tt == 'B')
+        {
+            BticketCounter++;
+            ticketNumber = BticketCounter;
+        }
+        if(tt == 'C')
+        {
+            CticketCounter++;
+            ticketNumber = CticketCounter;
+        }
+        if(tt == 'D')
+        {
+            DticketCounter++;
+            ticketNumber = DticketCounter;
+        }
+
     }
     protected String getTicketNumber() {
         return ticketType + String.valueOf(ticketNumber);
